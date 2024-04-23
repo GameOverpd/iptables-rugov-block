@@ -14,7 +14,7 @@ fi
 mv "$NEW_IP_FILE" "$OLD_IP_FILE"
 
 # Copy the blacklist.txt file from the source via the link
-if ! sudo wget -O "$NEW_IP_FILE" https://github.com/C24Be/AS_Network_List/raw/main/blacklists/blacklist.txt; then
+if ! sudo wget -O "$NEW_IP_FILE" https://github.com/GameOverpd/AS_Network_List/blob/main/blacklists/blacklist.txt; then
 	echo "Failed to load new blacklist. Lets leave the old list unchanged."
 	echo "$(date +"%Y-%m-%d %H:%M:%S") - Failed to load new blacklist. Lets leave the old list unchanged." >> /var/log/rugov_blacklist/blacklist_updater.log
 	exit 1
